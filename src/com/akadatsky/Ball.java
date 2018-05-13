@@ -35,6 +35,17 @@ public class Ball {
     public void move() {
         x += xSpeed;
         y += ySpeed;
+
+        double MAX_X = GC.getCanvas().getWidth();
+        double MAX_Y = GC.getCanvas().getHeight();
+
+        if (x <= 0 || x + diameter >= MAX_X) {
+            xSpeed = -xSpeed;
+        }
+
+        if (y <= 0 || y + diameter >= MAX_Y) {
+            ySpeed = -ySpeed;
+        }
     }
 
 }

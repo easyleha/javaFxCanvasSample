@@ -6,11 +6,12 @@ import javafx.scene.paint.Color;
 
 public class Board {
 
-    private final GraphicsContext gc;
+    private final GraphicsContext GC;
     private Ball ball;
 
+
     public Board(GraphicsContext gc) {
-        this.gc = gc;
+        this.GC = gc;
         ball = new Ball(gc);
     }
 
@@ -36,9 +37,9 @@ public class Board {
     }
 
     private void clean() {
-        gc.clearRect(0, 0, gc.getCanvas().getWidth(), gc.getCanvas().getHeight());
-        gc.setFill(Color.LIGHTGRAY);
-        gc.fillRoundRect(0, 0, gc.getCanvas().getWidth(), gc.getCanvas().getHeight(), 0, 0);
+        GC.clearRect(0, 0, GC.getCanvas().getWidth(), GC.getCanvas().getHeight());
+        GC.setFill(Color.LIGHTGRAY);
+        GC.fillRoundRect(0, 0, GC.getCanvas().getWidth(), GC.getCanvas().getHeight(), 0, 0);
     }
 
 }

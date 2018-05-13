@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private static final int WINDOW_WIDTH = 500;
-    private static final int WINDOW_HEIGHT = 500;
+    private static final int BOARD_WIDTH = 500;
+    private static final int BOARD_HEIGHT = 500;
     private static final int FPS = 60;
 
     private Board board;
@@ -25,8 +25,8 @@ public class Main extends Application {
         primaryStage.setTitle("SimpleGame");
         Canvas canvas = new Canvas();
         board = new Board(canvas.getGraphicsContext2D());
-        canvas.setWidth(WINDOW_WIDTH);
-        canvas.setHeight(WINDOW_HEIGHT);
+        canvas.setWidth(BOARD_WIDTH);
+        canvas.setHeight(BOARD_HEIGHT);
         BorderPane group = new BorderPane(canvas);
         Scene scene = new Scene(group);
         scene.setOnKeyPressed(event -> board.keyPressed(event.getCode()));
