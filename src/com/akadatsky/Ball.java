@@ -7,11 +7,11 @@ public class Ball {
 
     private final GraphicsContext GC;
 
-    private int diameter;
-    private int x;
-    private int y;
-    private int xSpeed;
-    private int ySpeed;
+    private double diameter;
+    private double x;
+    private double y;
+    private double xSpeed;
+    private double ySpeed;
 
     public Ball(GraphicsContext gc) {
         this.GC = gc;
@@ -19,8 +19,8 @@ public class Ball {
         y = 30;
         diameter = 20;
 
-        xSpeed = 4;
-        ySpeed = 3;
+        xSpeed = 2;
+        ySpeed = 1.5;
     }
 
     public void draw() {
