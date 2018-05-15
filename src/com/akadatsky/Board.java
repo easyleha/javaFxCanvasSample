@@ -4,6 +4,9 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Board {
 
     private final GraphicsContext GC;
@@ -13,6 +16,13 @@ public class Board {
     public Board(GraphicsContext gc) {
         this.GC = gc;
         ball = new Ball(gc);
+
+        List<Ball> ballList = new ArrayList<>();
+        ballList.add(new Ball(20, 30, 30, 3, 1.5, gc));
+        ballList.add(new Ball(20, 40, 30, 3, 2.5, gc));
+        ballList.add(new Ball(20, 50, 30, 2, 4.5, gc));
+
+
     }
 
     public void keyPressed(KeyCode code) {
