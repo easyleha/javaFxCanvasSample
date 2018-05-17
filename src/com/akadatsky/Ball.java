@@ -19,12 +19,6 @@ public class Ball {
 
     public Ball(GraphicsContext gc) {
         this.GC = gc;
-        x = 30;
-        y = 30;
-        diameter = 20;
-
-        xSpeed = 2;
-        ySpeed = 1.5;
 
     }
 
