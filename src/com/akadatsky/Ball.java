@@ -3,16 +3,18 @@ package com.akadatsky;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.util.List;
+
 public class Ball {
 
     private final GraphicsContext GC;
 
-    private String name;
     private double diameter;
     private double x;
     private double y;
     private double xSpeed;
     private double ySpeed;
+    private List<Ball> balls;
 
 
     public Ball(GraphicsContext gc) {
@@ -27,22 +29,19 @@ public class Ball {
     }
 
 
-    public Ball(double diameter, double x, double y, double xSpeed, double ySpeed, GraphicsContext gc) {
+    public Ball(double diameter, double x, double y, double xSpeed, double ySpeed, GraphicsContext gc,  List<Ball> balls) {
         this.diameter = diameter;
         this.x = x;
         this.y = y;
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
         this.GC = gc;
+        this.balls = balls;
     }
 
 
     public GraphicsContext getGC() {
         return GC;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getDiameter() {
@@ -63,6 +62,10 @@ public class Ball {
 
     public double getySpeed() {
         return ySpeed;
+    }
+
+    public List<Ball> getballs() {
+        return balls;
     }
 
     public void draw() {
