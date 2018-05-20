@@ -17,10 +17,6 @@ public class Ball {
     private List<Ball> balls;
 
 
-    public Ball(GraphicsContext gc) {
-        this.GC = gc;
-
-    }
 
 
     public Ball(double diameter, double x, double y, double xSpeed, double ySpeed, GraphicsContext gc,  List<Ball> balls) {
@@ -85,6 +81,21 @@ public class Ball {
         if (y <= 0 || y + diameter >= MAX_Y) {
             ySpeed = -ySpeed;
         }
-    }
 
+        if ((Math.abs(balls.get(0).getX() - balls.get(1).getX())  <= diameter) &&
+                (Math.abs(balls.get(0).getY() - balls.get(1).getY()) <= diameter)) {
+            xSpeed = -xSpeed;
+        }
+
+        if ((Math.abs(balls.get(0).getX() - balls.get(2).getX())  <= diameter) &&
+        (Math.abs(balls.get(0).getY() - balls.get(2).getY()) <= diameter)){
+            xSpeed = -xSpeed;
+        }
+        if ((Math.abs(balls.get(1).getX() - balls.get(2).getX())  <= diameter) &&
+                (Math.abs(balls.get(1).getY() - balls.get(2).getY()) <= diameter)){
+            xSpeed = -xSpeed;
+        }
+
+
+    }
 }
